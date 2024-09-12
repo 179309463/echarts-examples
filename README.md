@@ -50,9 +50,7 @@ For example:
 ```js
 $.when(
   $.getScript(ROOT_PATH + '/data/asset/js/xxxx.js'),
-  $.getScript(
-    'https://cdn.jsdelivr.net/npm/d3-contour@2.0.0/dist/d3-contour.js'
-  )
+  $.getScript('/vendor-cdn/d3-contour@2.0.0/dist/d3-contour.js')
 ).done(function () {
   // ...
 });

@@ -4,8 +4,8 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --config build/webpack.config.js --mode production",
-    "watch": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --config build/webpack.config.js --mode development --devtool source-map --watch",
+    "build": "webpack --config build/webpack.config.js --mode production",
+    "watch": "webpack --config build/webpack.config.js --mode development --devtool source-map --watch",
     "localsite": "npm run compile:example && npm run build && node build/copyResource.js --env localsite",
     "release": "npm run compile:example && npm run build && node build/copyResource.js --env asf",
     "dev": "concurrently --kill-others \"npm:watch\" \"npm:server\"",
